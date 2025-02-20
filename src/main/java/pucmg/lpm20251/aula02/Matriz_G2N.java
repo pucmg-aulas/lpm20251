@@ -9,15 +9,43 @@ package pucmg.lpm20251.aula02;
  * @author danil
  */
 public class Matriz_G2N {
-    
-  // public void criarMatriz(int linhas, int colunas){}
-    
-    //public void preencherMatriz(int[][] matriz){}
-    
-    //public int[][] multiplicarPorConstante(int c){}
-    
-    //public String imprimirMatriz(){}
-    
-    
-    
+
+    private int linhas;
+    private int colunas;
+    private int[][] matriz;
+
+    public void criarMatriz(int linhas, int colunas) {
+        this.linhas = linhas;
+        this.colunas = colunas;
+        this.matriz = new int[linhas][colunas];
+    }
+
+    public void preencherMatriz(int[][] matriz) {
+        this.matriz = matriz;
+    }
+
+    public int[][] multiplicarPorConstante(int c) {
+        int[][] m = new int[this.linhas][this.colunas];
+
+        for (int i = 0; i < this.linhas; i++) {
+            for (int j = 0; j < this.colunas; j++) {
+                m[i][j] = this.matriz[i][j] * c;
+            }
+        }
+
+        return m;
+    }
+
+    public String imprimirMatriz() {
+        String print = "";
+
+        for (int i = 0; i < this.linhas; i++) {
+            for (int j = 0; j < this.colunas; j++) {
+                print += matriz[i][j] + " ";
+            }
+            print += "\n";
+        }
+        return print;
+    }
+
 }
