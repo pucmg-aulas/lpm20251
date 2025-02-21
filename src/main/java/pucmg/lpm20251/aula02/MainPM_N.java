@@ -16,7 +16,8 @@ public class MainPM_N {
         cc.criarConta("João", 100);
         cc.depositar(3000);
         
-     
+        cc.setLimiteCredito(2000);
+        
         
     }
     
