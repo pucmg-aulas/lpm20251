@@ -23,7 +23,7 @@ public class DataN {
     }
 
     public DataN() {
-        //init(1, 1, 2005);
+        init(1, 1, 2005);
     }
     private void init(int dia, int mes, int ano){
         this.dia = dia;
@@ -42,11 +42,7 @@ public class DataN {
     }
 
     public boolean anoBissexto() {
-        if ((this.ano % 4 == 0 && this.ano % 100 != 0) || (this.ano % 400 == 0)) {
-            return true;
-        } else {
-            return false;
-        }
+        return (this.ano % 400 == 0) || (this.ano % 100 != 0 && this.ano % 4 == 0);
     }
 
     public boolean dataValida() {
@@ -64,11 +60,7 @@ public class DataN {
             mes[1] = 29;
         }
 
-        if (this.dia < 1 && this.dia > mes[this.mes - 1]) {
-            return false;
-        }
-
-        return true;
+        return !(this.dia < 1 || this.dia > mes[this.mes - 1]);
     }
 
     public String dataFormatada() {
