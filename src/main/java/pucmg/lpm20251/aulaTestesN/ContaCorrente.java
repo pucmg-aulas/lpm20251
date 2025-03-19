@@ -20,7 +20,13 @@ public class ContaCorrente {
 
     }
 
-    public void sacar(double valor) {
+    public String sacar(double valor) {
+
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            return "Saque de " + valor + " efetuado com sucesso!";
+        }
+        return "Saldo Insuficiente!";
 
     }
 
