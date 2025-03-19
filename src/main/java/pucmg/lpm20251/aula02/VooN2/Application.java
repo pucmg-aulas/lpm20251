@@ -29,9 +29,9 @@ public class Application {
         int poltrona;
         int volumeBagagem;
         
-        Passageiro p = buscarPassageiroByNome(nomePassageiro);
+        //Passageiro p = buscarPassageiroByNome(nomePassageiro);
         
-        Passagem pass = new Passagem(p, poltrona, volumeBagagem);
+        //Passagem pass = new Passagem(p, poltrona, volumeBagagem);
     }
     
     public static Passageiro buscarPassageiroByNome(String nome){
